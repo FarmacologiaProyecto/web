@@ -1,0 +1,220 @@
+/* RESET Y LAYOUT PARA STICKY FOOTER */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html, body {
+    height: 100%;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+  }
+  
+  /* HEADER */
+  .encabezado {
+    background: #fff;
+    border-bottom: 2px solid #d9d9d9;
+  }
+  .contenido-header {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo-titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo {
+    height: 50px;
+  }
+  .logo + h1 {
+    margin-left: 10px;
+    font-size: 20px;
+    color: #222;
+  }
+  
+  /* MENÚ */
+  .menu {
+    margin-left: auto;
+  }
+  .menu ul {
+    list-style: none;
+    display: flex;
+  }
+  .menu li + li {
+    margin-left: 20px;
+  }
+  .menu a {
+    text-decoration: none;
+    color: #004080;
+  }
+  .menu a.activo {
+    font-weight: bold;
+    border-bottom: 2px solid #004080;
+  }
+  
+  /* HAMBURGER */
+  .menu-hamburger {
+    display: none;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  @media (max-width: 768px) {
+    .menu-hamburger {
+      display: block;
+    }
+    .menu {
+      display: none;
+      position: absolute;
+      top: 70px;
+      right: 0;
+      background: #fff;
+      width: 200px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .menu.open {
+      display: block;
+    }
+    .menu ul {
+      flex-direction: column;
+    }
+    .menu li {
+      margin: 0;
+      border-bottom: 1px solid #eee;
+    }
+    .menu a {
+      display: block;
+      padding: 12px 20px;
+    }
+  }
+  
+  /* BANNER (solo en index.html) */
+  .banner {
+    background: linear-gradient(to right, #004080, #0066cc);
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+  }
+  .banner h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  .banner p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* CONTENIDO */
+  main {
+    flex: 1;
+  }
+  .contenido {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  .contenido h2,
+  .contenido h3 {
+    color: #003366;
+    margin-bottom: 15px;
+  }
+  .contenido p,
+  .contenido ul {
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  .contenido a {
+    color: #0066cc;
+    text-decoration: underline;
+  }
+  
+  /* TABLAS */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  /* ACORDEÓN en efectos.html */
+  .acordeon-btn {
+    width: 100%;
+    background: #e9ecef;
+    border: none;
+    text-align: left;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  .acordeon-contenido {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: #fff;
+    padding: 0 12px;
+  }
+  
+  /* SOBRE MÍ */
+  .mi-foto {
+    width: 150px;
+    border-radius: 50%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  form input, form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+  }
+  button[type="submit"] {
+    background: #004080;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  /* FOOTER STICKY */
+  .footer {
+    background: #fff;
+    border-top: 2px solid #d9d9d9;
+    margin-top: auto;
+  }
+  .contenido-footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  .footer-nav a {
+    margin: 0 5px;
+    color: #004080;
+    text-decoration: none;
+  }
+  .footer-nav a:hover {
+    text-decoration: underline;
+  }
+  .footer p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+  }
